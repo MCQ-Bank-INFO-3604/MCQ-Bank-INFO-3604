@@ -1,0 +1,9 @@
+{% for assessment in assessments %}
+    <div>
+        <h3>{{ assessment.title }}</h3>
+        <p>Created by: {{ assessment.lecturer.username }}</p>
+        <a href="{% url 'generate_assessment_pdf' assessment.id %}" class="btn btn-primary">
+            Generate Assessment
+        </a>
+    </div>
+{% endfor %}
